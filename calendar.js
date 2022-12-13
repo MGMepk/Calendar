@@ -11,13 +11,13 @@ function calculoHoras() {
 
   let hoyEs = new Date();
   let dias = 0;
-  let array = 0;
+  let array = hoyEs.getDay() - 1 ;
   while (total > 0) {
-    total = total - semana[hoyEs.getDay() - 1 + array];
+    total = total - semana[array];
     dias++;
     array++;
     if (array >= 6) {
-      array = 0 - hoyEs.getDay();
+      array = 0;
     }
   }
 
